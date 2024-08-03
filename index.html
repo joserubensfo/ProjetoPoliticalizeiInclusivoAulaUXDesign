@@ -15,7 +15,8 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="/assets/logo.png" alt="Politicalizei" width="100" height="100">
+        <img src="/assets/logo.png" alt="Imagem do Logo do Site Politicalizei mostrando uma mão apontando para cima"
+          width="100" height="100">
         Politicalizei
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -39,43 +40,50 @@
         </ul>
       </div>
       <a class="navbar-brand" href="#">
-        <img src="/assets/user.png" alt="user" style="width:40px;" class="rounded-pill">
+        <img src="/assets/user.png" alt="Imagem do Usuário Logado no Sistema" style="width:40px;" class="rounded-pill">
       </a>
     </div>
   </nav>
   <div id="home" class="container">
     <div class="container-custom d-flex justify-content-center align-items-center">
-      <div class="text-center w-40 p-3" style="min-width: 320px;">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquise candidatos..."
-            aria-label="Pesquise candidatos...">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+      <div class="input-group group-search">
+        <button class="btn btn-outline-secondary" id="searchbutton" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg>
+        </button>
+        <input type="text" class="form-control" id="search-text" placeholder="Pesquisar candidatos..."
+          aria-label="Recipient's username with two button addons">
+          <button class="btn btn-outline-secondary" id="filterbutton" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="black" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5" d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"/></svg>
+          </button>
       </div>
     </div>
     <div class="container-custom d-flex justify-content-between align-items-center">
       <div class="mb-3">
         <label for="disabledSelect" class="form-label">Selecione a cidade:</label>
-        <select id="disabledSelect" class="form-select">
+        <select id="disabledSelect" class="form-select city-select">
           <option>São Carlos</option>
-          <option>Tiête</option>
+          <option>Tietê</option>
           <option>Araras</option>
         </select>
       </div>
       <div>
-        <button type="button" class="btn btn-warning text-color-azul">Monte sua colinha!</button>
+        <button type="button" class="btn btn-warning text-color-azul"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24">
+            <path id="colinha"
+              d="M3 21v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM17.6 7.8L19 6.4L17.6 5l-1.4 1.4z" />
+          </svg> Monte sua colinha!</button>
       </div>
     </div>
     <div class="mt-3">
       <h2>Ranking</h2>
-      <div class="container-fluid mt-5 mb-3">
+      <div class="container-fluid mt-5 mb-5">
         <div id="carouselRanking" class="carousel slide">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row">
                 <div class="col cand">
                   <img src="./assets/candidates/can1.jpeg" class="rounded-circle img-cand"
-                    alt="Candidato á prefeito Robson">
+                    alt="Candidato á prefeito Robson, com 5 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -100,7 +108,7 @@
                   </div>
                 </div>
                 <div class="col cand">
-                  <img src="./assets/candidates/can2.jpeg" class="rounded-circle img-cand" alt="...">
+                  <img src="./assets/candidates/can2.jpeg" class="rounded-circle img-cand" alt="Candidato á prefeito Roberto, com 4 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -125,7 +133,7 @@
                   </div>
                 </div>
                 <div class="col cand">
-                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="...">
+                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="Candidato á prefeito João, com 3 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -150,7 +158,7 @@
                   </div>
                 </div>
                 <div class="col cand">
-                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="...">
+                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="Candidato á prefeito João, com 3 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -180,7 +188,7 @@
               <div class="row">
                 <div class="col cand">
                   <img src="./assets/candidates/can1.jpeg" class="rounded-circle img-cand"
-                    alt="Candidato á prefeito Robson">
+                  alt="Candidato á prefeito Robson, com 5 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -205,7 +213,7 @@
                   </div>
                 </div>
                 <div class="col cand">
-                  <img src="./assets/candidates/can2.jpeg" class="rounded-circle img-cand" alt="...">
+                  <img src="./assets/candidates/can2.jpeg" class="rounded-circle img-cand" alt="Candidato á prefeito Roberto, com 4 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -230,7 +238,7 @@
                   </div>
                 </div>
                 <div class="col cand">
-                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="...">
+                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="Candidato á prefeito João, com 3 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -255,7 +263,7 @@
                   </div>
                 </div>
                 <div class="col cand">
-                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="...">
+                  <img src="./assets/candidates/can3.jpeg" class="rounded-circle img-cand" alt="Candidato á prefeito João, com 3 estrelas no ranking">
                   <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <path fill="#ffd500"
@@ -283,35 +291,39 @@
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselRanking" data-bs-slide="prev">
-              <span class="previous"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#027749" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/></svg></span>
+            <span class="previous"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                <path fill="#027749" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z" />
+              </svg></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselRanking" data-bs-slide="next">
-            <span class="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#027749" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/></svg></span>
+            <span class="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                <path fill="#027749" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z" />
+              </svg></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div>
-      <div class="mt-3 container">
+      <div class="mt-3">
         <h3>Últimas notícias</h3>
-        <div class="container-fluid">
+        <div class="container-fluid mt-5 mb-3">
           <div id="carouselUltimasNoticias" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="d-flex justify-content-around">
                   <div>
                     <img src="./assets/notices/not1.png" class="img-thumbnail"
-                      style="height: 250px; width: 350px; border-radius: 15px;" alt="...">
+                      style="height: 250px; width: 350px; border-radius: 15px;" alt="Lorem Ipsum">
                     <a class="nav-link" href="noticias.html">Lorem Ipsum</a>
                   </div>
                   <div>
                     <img src="./assets/notices/not2.png" class="img-thumbnail"
-                      style="height: 250px; width: 350px; border-radius: 15px;" alt="...">
+                      style="height: 250px; width: 350px; border-radius: 15px;" alt="Lorem Ipsum2">
                     <a class="nav-link" href="noticias.html">Lorem Ipsum2</a>
                   </div>
                   <div>
                     <img src="./assets/notices/not3.png" class="img-thumbnail"
-                      style="height: 250px; width: 350px; border-radius: 15px;" alt="...">
+                      style="height: 250px; width: 350px; border-radius: 15px;" alt="Lorem Ipsum3">
                     <a class="nav-link" href="noticias.html">Lorem Ipsum3</a>
                   </div>
                 </div>
@@ -320,17 +332,17 @@
                 <div class="d-flex justify-content-around">
                   <div>
                     <img src="./assets/notices/not4.png" class="img-thumbnail"
-                      style="height: 250px; width: 350px; border-radius: 15px;" alt="...">
+                      style="height: 250px; width: 350px; border-radius: 15px;" alt="Lorem Ipsum4">
                     <a class="nav-link" href="noticias.html">Lorem Ipsum4</a>
                   </div>
                   <div>
                     <img src="./assets/notices/not5.png" class="img-thumbnail"
-                      style="height: 250px; width: 350px; border-radius: 15px;" alt="...">
+                      style="height: 250px; width: 350px; border-radius: 15px;" alt="Lorem Ipsum5">
                     <a class="nav-link" href="noticias.html">Lorem Ipsum5</a>
                   </div>
                   <div>
                     <img src="./assets/notices/not6.png" class="img-thumbnail"
-                      style="height: 250px; width: 350px; border-radius: 15px;" alt="...">
+                      style="height: 250px; width: 350px; border-radius: 15px;" alt="Lorem Ipsum6">
                     <a class="nav-link" href="noticias.html">Lorem Ipsum6</a>
                   </div>
                 </div>
@@ -338,19 +350,22 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselUltimasNoticias"
               data-bs-slide="prev">
-              <span class="previous-news"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#027749" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z"/></svg></span>
+              <span class="previous"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                  <path fill="#027749" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z" />
+                </svg></span>
               <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselUltimasNoticias"
               data-bs-slide="next">
-              <span class="next-news"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20"><path fill="#027749" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"/></svg></span>
+              <span class="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                  <path fill="#027749" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z" />
+                </svg></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
