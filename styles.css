@@ -1,0 +1,20 @@
+.nav-item {
+    /* Define um tamanho de fonte padrão que será sobrescrito pelo JavaScript */
+    font-size: 24px;
+}
+
+.container-custom {
+    height: 20vh; /* Define a altura do contêiner */
+}
+
+.nav-item.active , .nav-item.active a {
+    color: #027749;
+    font-weight: bold;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+.nav-link:hover {
+    color: #FFBC09;
+    font-weight: bold;
+}
